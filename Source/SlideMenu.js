@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 
+
 import TopMenu from 'Trekking/Welcome/TopMenu';
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -43,7 +44,7 @@ export default class GeneralInfoPage extends Component{
                 Visa Information
               </Text>
               <Text style = {styles.content}>
-                <Text style={{color: '#4d0000'}}
+                <Text style={{color: '#71C671', textDecorationLine: 'underline'}}
                       onPress={() => Linking.openURL('http://online.nepalimmigration.gov.np/tourist-visa')}>
                   Apply Visa Online {"\n"}{"\n"}
                 </Text>
@@ -667,45 +668,50 @@ class Menu extends Component {
         <View style={styles.avatarContainer}>
           <Image
             style={styles.avatar}
-            source={{ uri, }}/>
-          <Text style={styles.name}>Your name</Text>
+            source={require('Trekking/Images/avatar.jpg')}/>
+          <Text style={styles.name}>Buddha Trek</Text>
         </View>
-
+        <View style={styles.menuContainer}>
         <Text
           onPress={() => this.props.onItemSelected('generalInfo')}
           style={styles.itemText}>
           General Info
         </Text>
-
+        </View>
+        <View style={styles.menuContainer}>
         <Text
           onPress={() => this.props.onItemSelected('checklist')}
           style={styles.itemText}>
           Checklist
         </Text>
-        <Text
-          onPress={() => this.props.onItemSelected('about')}
-          style={styles.itemText}>
-          About Us
-        </Text>
+        </View>
+        <View style={styles.menuContainer}>
         <Text
           onPress={() => this.props.onItemSelected('gallery')}
           style={styles.itemText}>
           Gallery
         </Text>
+        </View>
+        <View style={styles.menuContainer}>
+        <Text
+          onPress={() => this.props.onItemSelected('about')}
+          style={styles.itemText}>
+          About Us
+        </Text>
+        </View>
+        <View style={styles.menuContainer}>
         <Text
           onPress={() => this.props.onItemSelected('contact')}
           style={styles.itemText}>
           Contact Us
         </Text>
+        </View>
       </ScrollView>
     );
   }
 }
 
-var styles = StyleSheet.create({
-    menuButton: {
-
-    },
+const styles = StyleSheet.create({
     menuImage: {
       backgroundColor: 'blue'
     },
@@ -718,7 +724,7 @@ var styles = StyleSheet.create({
     },
     heading :{
         fontSize: 32,
-        color:'#b34d4d',
+        color:'#8B0000',
         textAlign: 'left',
         marginLeft: 18,
         marginTop: 10
@@ -726,7 +732,7 @@ var styles = StyleSheet.create({
     },
     heading2 :{
         fontSize: 28,
-        color:'#ac5353',
+        color:'#9E0508',
         textAlign: 'left',
         marginLeft: 18,
     },
@@ -734,32 +740,37 @@ var styles = StyleSheet.create({
         fontSize : 0.04 * windowWidth,
         padding: 10,
         margin: 20,
+        color: '#030303',
 
     },
     menuSection: {
-    flex: 1,
-    width: window.width,
-    height: window.height,
-    backgroundColor: '#332f2e',
-    padding: 30,
+      flex: 1,
+      width: window.width,
+      height: window.height,
+      backgroundColor: 'rgb(200,200,200)',
+      paddingTop: 30,
   },
   avatarContainer: {
-    marginBottom: 40,
-    marginTop: 40,
+      marginTop: 40,
+      borderWidth: 0.3,
+      borderColor: '#aaaaaa',
   },
   avatar: {
-    width: 75,
-    height: 75,
+    width: 0.16* windowWidth,
+    height: 0.1 * windowHeight,
     borderRadius: 24,
+    marginBottom: 30,
+    marginTop: 20,
+    marginLeft: 20,
     flex: 1,
   },
   name: {
     position: 'absolute',
-    left: 70,
-    color: '#c4b2ad',
-    top: 20,
-    fontSize: 0.05*windowWidth,
-    marginLeft: 10
+    color: '#000000',
+    top: 30,
+    fontSize: 0.06*windowWidth,
+    marginLeft: 0.22* windowWidth,
+    marginTop: 0.015 * windowHeight,
   },
     image : {
         margin : 20,
@@ -778,6 +789,10 @@ var styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
+    menuContainer: {
+      borderWidth: 0.5,
+      borderColor: '#aaaaaa',
+  },
     menuText: {
       flex: 1,
       width: window.width,
@@ -786,12 +801,13 @@ var styles = StyleSheet.create({
     },
     itemText: {
       fontSize: 0.04*windowWidth,
-      color: '#c4b2ad',
+      color: '#000000',
       fontWeight: '300',
       marginTop: 20,
       paddingLeft: 20,
       marginBottom: 20,
-      marginLeft: 20
+      marginLeft: 20,
+
   },
   backgroundImage:{
     width: windowWidth,

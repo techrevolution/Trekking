@@ -28,7 +28,7 @@ export default class Home extends Component{
                     >
                     <Text style={styles.welcome}>
 
-                        There are no foreign lands. It is the traveler only who is foreign.
+                        There are no foreign lands. It is the traveller only who is foreign.
                     </Text>
                       <Text style={styles.text}>
                           Welcome to the land of Himalayas !
@@ -54,16 +54,18 @@ const styles = StyleSheet.create({
         width: windowWidth
     },
     welcome : {
-        fontSize : 30,
-        marginTop: 0.28 * windowHeight,
-        paddingLeft: 20,
-        paddingRight:20,
-        textAlign: 'center'
+        fontSize : 0.05* windowWidth,
+        marginTop: 0.24 * windowHeight,
+        marginLeft: 20,
+        marginRight:20,
+        textAlign: 'center',
+        color: '#000000'
     },
     text : {
-      fontSize : 30,
+      fontSize : 0.05* windowWidth,
       paddingBottom: 5,
-      textAlign: 'center'
+      textAlign: 'center',
+      color: '#000000'
     }
 });
 

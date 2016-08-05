@@ -255,7 +255,7 @@ export default class ChecklistPage extends Component{
                   - Nail clippers{'\n'}
                   - Face and body moisturizer{'\n'}
                   - Feminine hygiene products{'\n'}
-                  - Small mirror{'\n'}{'\n'}{'\n'}
+                  - Small mirror{'\n'}{'\n'}
                 </Text>
               </Text>
             </ScrollView>
@@ -342,12 +342,10 @@ export default class AboutPage extends Component{
 
                 Worst case, some opinions offered by local trekking agencies might be more profit driven than anything else. Best case, you’ll receive good but likely different pieces of advice from various prudent trekking companies in Kathmandu. Because which trek is actually the best in Nepal?{"\n"}
               </Text>
-
               <Text style = {styles.heading2}>
                 Some Trekking Routes
               </Text>
               <Text style = {styles.content}>
-
                 -  Everest Base Camp {'\n'}
                 -  Annapurna Circuit {'\n'}
                 -  Annapurna Base Camp {'\n'}
@@ -359,14 +357,12 @@ export default class AboutPage extends Component{
                 -  Upper Dolpo {'\n'}
                 -  Kanchanjunga Trek {'\n'}
                 -  Makalu Base Camp {'\n'}
-
               </Text>
               <Text style = {styles.heading2}>
                 About App
               </Text>
               <Text style = {styles.content}>
                 This app provides the complete information about trekking in Nepal.{'\n'}
-
               </Text>
               <Text style = {styles.heading2}>
                 Powered By:
@@ -762,8 +758,8 @@ var styles = StyleSheet.create({
     left: 70,
     color: '#c4b2ad',
     top: 20,
-    fontSize: 35,
-    marginLeft: 20
+    fontSize: 0.04*windowWidth,
+    marginLeft: 10
   },
     image : {
         margin : 20,
@@ -789,11 +785,12 @@ var styles = StyleSheet.create({
       padding: 20,
     },
     itemText: {
-      fontSize: 32,
+      fontSize: 0.03*windowWidth,
       color: '#c4b2ad',
       fontWeight: '300',
       marginTop: 20,
       paddingLeft: 20,
+      marginBottom: 20,
       marginLeft: 20
   },
   backgroundImage:{

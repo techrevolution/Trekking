@@ -731,7 +731,7 @@ var styles = StyleSheet.create({
         marginLeft: 18,
     },
     content : {
-        fontSize : 26,
+        fontSize : 0.04 * windowWidth,
         padding: 10,
         margin: 20,
 
@@ -758,7 +758,7 @@ var styles = StyleSheet.create({
     left: 70,
     color: '#c4b2ad',
     top: 20,
-    fontSize: 0.04*windowWidth,
+    fontSize: 0.05*windowWidth,
     marginLeft: 10
   },
     image : {
@@ -785,7 +785,7 @@ var styles = StyleSheet.create({
       padding: 20,
     },
     itemText: {
-      fontSize: 0.03*windowWidth,
+      fontSize: 0.04*windowWidth,
       color: '#c4b2ad',
       fontWeight: '300',
       marginTop: 20,

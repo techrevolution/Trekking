@@ -9,19 +9,20 @@ import {
     AppRegistry,
     Text,
     View,
-    Image
+    Image,
 } from 'react-native';
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-import StyleVars from 'Trekking/Styles/StyleVars';
+import StyleVars from '../Styles/StyleVars';
 
 export default class TopMenu extends Component{
     render(){
         return(
                 <View style = {styles.menu} >
                 <Image
-                  source={require('Trekking/Images/menu.png')} style={styles.menuImage} />
+                  source={require('../Images/menu.png')} style={styles.menuImage}
+                />
                     <Text style = {styles.menuText}>
                         Buddha Trek
                     </Text>

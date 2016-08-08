@@ -14,7 +14,7 @@ import {
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-import StyleVars from 'Trekking/Styles/StyleVars';
+import StyleVars from '../Styles/StyleVars';
 
 export default class Header extends Component{
     render(){

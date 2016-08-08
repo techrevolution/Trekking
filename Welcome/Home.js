@@ -23,7 +23,7 @@ export default class Home extends Component{
 
                 <View style = {styles.body} >
                     <Image
-                        source={require('Trekking/Images/trekker.png')}
+                        source={require('../Images/trekker.png')}
                         style={styles.image}
                     >
                     <Text style={styles.welcome}>

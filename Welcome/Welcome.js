@@ -15,9 +15,10 @@ import {
 } from 'react-native';
 
 
-import Header from 'Trekking/Welcome/Header';
-import Home from 'Trekking/Welcome/Home';
-import MenuNavigator from 'Trekking/Source/SlideMenu';
+import Header from '../Welcome/Header';
+import Home from '../Welcome/Home';
+import MenuNavigator from '../Source/SlideMenu';
+//import Container from '../Source/Container';
 
 
 export default class Welcome extends Component{
@@ -37,7 +38,7 @@ export default class Welcome extends Component{
         )
     }
     onButtonPress(value){
-        this.props.navigator.push({
+        this.props.navigator.replace({
             id: value
         });
     }

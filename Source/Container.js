@@ -28,6 +28,7 @@ import TopMenu from '../Welcome/TopMenu';
 import MenuNavigator from '../Source/SlideMenu';
 import MenuButton from '../Source/SlideMenu';
 import Menu from '../Source/SlideMenu';
+import ContentStyles from '../Styles/ContentStyles';
 
 
 
@@ -35,10 +36,10 @@ export default class Container extends Component{
   render(){
     return(
       <ScrollView>
-    <View style={styles.topContainer}>
+    <View style={ContentStyles.topContainer}>
         <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer1')
         }><Image
-                        style={styles.imageContainer1}
+                        style={ContentStyles.imageContainer1}
                         source={require('../Images/image1.jpg')}
                           resizeMode={'cover'}
                     />
@@ -48,7 +49,7 @@ export default class Container extends Component{
         <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer2')
         }>
             <Image
-                style={styles.imageContainer2}
+                style={ContentStyles.imageContainer2}
                 source={require('../Images/image2.jpg')}
 
             />
@@ -57,7 +58,7 @@ export default class Container extends Component{
         <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer3')
         }>
             <Image
-                style={styles.imageContainer3}
+                style={ContentStyles.imageContainer3}
                 source={require('../Images/image3.jpg')}
 
             />
@@ -65,7 +66,7 @@ export default class Container extends Component{
 
         <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer4')
         }><Image
-            style={styles.imageContainer4}
+            style={ContentStyles.imageContainer4}
             source={require('../Images/image4.jpg')}
 
         />

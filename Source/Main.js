@@ -18,10 +18,7 @@ import Welcome from '../Welcome/Welcome';
 import MenuNavigator from '../Source/SlideMenu';
 import Container from '../Source/Container';
 
-import ContentContainer1 from '../Modules/ContentContainers/ContentContainer1';
-import ContentContainer2 from '../Modules/ContentContainers/ContentContainer2';
-import ContentContainer3 from '../Modules/ContentContainers/ContentContainer3';
-import ContentContainer4 from '../Modules/ContentContainers/ContentContainer4';
+
 
 
 
@@ -59,15 +56,7 @@ export default class Main extends Component{
                 return <Container navigator={navigator} />
             case 'slideMenu':
                 return <MenuNavigator navigator ={navigator} />
-            case 'contentContainer1':
-                return <ContentContainer1 navigator ={navigator} />
-            case 'contentContainer2':
-                return <ContentContainer2 navigator ={navigator} />
-            case 'contentContainer3':
-                return <ContentContainer3 navigator ={navigator} />
-            case 'contentContainer4':
-                return <ContentContainer4 navigator ={navigator} />
-
+            
         }
 
     }

@@ -7,7 +7,7 @@ import View1 from 'Trekking/Modules/ContentContainers/ContentContainer1/view1';
 import View2 from 'Trekking/Modules/ContentContainers/ContentContainer1/view2';
 import View3 from 'Trekking/Modules/ContentContainers/ContentContainer1/view3';
 import View4 from 'Trekking/Modules/ContentContainers/ContentContainer1/view4';
-import ContentStyles from 'Trekking/Styles/ContentStyles';
+import ContentStyles from '../../Styles/ContentStyles';
 export default class ContentContainer1 extends Component{
 
     render() {

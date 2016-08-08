@@ -16,7 +16,8 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  BackAndroid
 } from 'react-native';
 
 
@@ -32,6 +33,12 @@ import ChecklistPage from '../Views/ChecklistPage';
 import GalleryPage from '../Views/GalleryPage';
 import AboutPage from '../Views/AboutPage';
 import ContactPage from '../Views/ContactPage';
+import ContentStyles from '../Styles/ContentStyles';
+
+import ContentContainer1 from '../Modules/ContentContainers/ContentContainer1';
+import ContentContainer2 from '../Modules/ContentContainers/ContentContainer2';
+import ContentContainer3 from '../Modules/ContentContainers/ContentContainer3';
+import ContentContainer4 from '../Modules/ContentContainers/ContentContainer4';
 
 
 export default class GeneralInfo extends Component {
@@ -241,6 +248,13 @@ export default class ContainerSection extends Component {
     this.state = {};
   }
 
+  onButtonPress(value){
+
+       this.props.navigator.push({
+          id: value
+        });
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -269,7 +283,46 @@ export default class ContainerSection extends Component {
             isOpen={this.state.isOpen}
             onChange={(isOpen) => this.updateMenuState(isOpen)}>
           <MenuButton onPress={() => this.toggle()}/>
-          <Container/>
+          <ScrollView>
+        <View style={ContentStyles.topContainer}>
+            <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer1')
+            }><Image
+                            style={ContentStyles.imageContainer1}
+                            source={require('../Images/image1.jpg')}
+                              resizeMode={'cover'}
+                        />
+
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer2')
+            }>
+                <Image
+                    style={ContentStyles.imageContainer2}
+                    source={require('../Images/image2.jpg')}
+
+                />
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer3')
+            }>
+                <Image
+                    style={ContentStyles.imageContainer3}
+                    source={require('../Images/image3.jpg')}
+
+                />
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress={ this.onButtonPress.bind(this,'contentContainer4')
+            }><Image
+                style={ContentStyles.imageContainer4}
+                source={require('../Images/image4.jpg')}
+
+            />
+            </TouchableHighlight>
+
+        </View>
+
+        </ScrollView>
         </Trekking>
     );
   }
@@ -283,6 +336,14 @@ class MenuNavigator extends Component {
   }
 
   renderScene(route, nav) {
+    BackAndroid.addEventListener('hardwareBackPress',function () {
+        if (navigator && navigator.getCurrentRoutes().length > 1) {
+            navigator.pop();
+            return true;
+        }
+        return false;
+    });
+    navigator = nav;
     switch (route.id) {
       case 'container':
       return <ContainerSection navigator={nav} />;
@@ -296,6 +357,14 @@ class MenuNavigator extends Component {
         return <Gallery navigator={nav} />;
       case 'contact':
         return <Contact navigator={nav} />;
+      case 'contentContainer1':
+          return <ContentContainer1 navigator ={nav} />
+      case 'contentContainer2':
+          return <ContentContainer2 navigator ={nav} />
+      case 'contentContainer3':
+          return <ContentContainer3 navigator ={nav} />
+      case 'contentContainer4':
+          return <ContentContainer4 navigator ={nav} />
       default:
         return <ContainerSection navigator={nav} />;
     }
